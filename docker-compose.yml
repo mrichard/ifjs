@@ -1,0 +1,11 @@
+nginx:
+  image: dockerfile/nginx
+  ports:
+    - "80:80"
+  links:
+    - ghost:ghost
+
+ghost:
+  image: dockerfile/ghost
+  ports:
+    - "2368:2368"
