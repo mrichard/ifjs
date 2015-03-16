@@ -1,15 +1,17 @@
-nginx:
-  image: dockerfile/nginx
-  ports:
-    - "80:80"
-  volumes:
-    - ~/ifjs/nginx_config:/etc/nginx:ro
-  links:
-    - ghost
+#nginx:
+  #image: dockerfile/nginx
+  #ports:
+    #- "80:80"
+  #volumes:
+    #- ~/ifjs/nginx_config:/etc/nginx:ro
+  #links:
+    #- ghost
 
 ghost:
   image: dockerfile/ghost
   ports:
     - "2368:2368"
+  env_file:
+    - ~/.env
   volumes:
     - ~/ifjs/ghost_config:/ghost-override
