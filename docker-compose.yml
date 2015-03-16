@@ -12,6 +12,6 @@ ghost:
   ports:
     - "2368:2368"
   env_file:
-    - ~/.env
+    - .env
   volumes:
     - ~/ifjs/ghost_config:/ghost-override
