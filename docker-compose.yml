@@ -3,13 +3,13 @@ nginx:
   ports:
     - "80:80"
   volumes:
-    - ~/nginx_config:/etc/nginx:ro
+    - ~/ifjs/nginx_config:/etc/nginx:ro
   links:
-    - ghost:ghost
+    - ghost
 
 ghost:
   image: dockerfile/ghost
   ports:
     - "2368:2368"
   volumes:
-    - ~/ghost_config:/ghost-override
+    - ~/ifjs/ghost_config:/ghost-override
