@@ -10,7 +10,7 @@
 ghost:
   image: dockerfile/ghost
   ports:
-    - "2368:2368"
+    - "80:2368"
   env_file:
     - .env
   volumes:
